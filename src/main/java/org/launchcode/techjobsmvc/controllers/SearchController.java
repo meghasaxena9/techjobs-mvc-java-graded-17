@@ -21,7 +21,7 @@ import static org.launchcode.techjobsmvc.controllers.ListController.columnChoice
 @RequestMapping("search")
 public class SearchController {
 
-    @GetMapping(value = "result")
+    @GetMapping(value = "")
     public String search(Model model) {
         model.addAttribute("columns", columnChoices);
         return "search";
@@ -32,7 +32,7 @@ public class SearchController {
     @PostMapping("results")
     public String displaySearchResults(Model model,
                                        @RequestParam String searchType,
-                                       @RequestParam (required = false)String searchTerm) {
+                                       @RequestParam String searchTerm) {
         ArrayList<Job> jobs;
 
         if (searchType.equals("all") && searchTerm.isEmpty()) {
@@ -47,7 +47,7 @@ public class SearchController {
         model.addAttribute("jobs", jobs);
         model.addAttribute("columns", columnChoices);
 
-        return "list-jobs";
+        return "search";
     }
 }
 
