@@ -49,19 +49,19 @@
         </tr>
         <tr>
             <td>Employer</td>
-            <td th:text="${job.employer}"></td>
+            <td th:text="${job.employer.value}"></td>
         </tr>
         <tr>
             <td>Location</td>
-            <td th:text="${job.location}"></td>
+            <td th:text="${job.location.value}"></td>
         </tr>
         <tr>
             <td>Position Type</td>
-            <td th:text="${job.positionType}"></td>
+            <td th:text="${job.positionType.value}"></td>
         </tr>
         <tr>
             <td>Skill</td>
-            <td th:text="${job.coreCompetency}"></td>
+            <td th:text="${job.coreCompetency.value}"></td>
         </tr>
 
     </table>
